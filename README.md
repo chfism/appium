@@ -1,3 +1,6 @@
+* 定位控件需要在Yaml中，无法复用，新建Case需要修改yaml/TestCase/PageObject较繁琐
+
+
 # 项目名及简介
 * 基于appium+python3封装的自动化测试框架
 
