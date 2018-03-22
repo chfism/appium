@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-from PageObject.Login.LoginPage import LoginPage
+from PageObject.Login.Page import Page
 from Base.BaseRunner import ParametrizedTestCase
 from Base.BaseTestBase import *
 import sys
@@ -15,23 +15,11 @@ class LoginTest(ParametrizedTestCase):
         app = {}
         app["logTest"] = self.logTest
         app["driver"] = self.driver
-        app["path"] = PATH("../yaml/Login/FirstTimeLogin.yaml")
+        app["path"] = PATH("../yaml/Login/Login.yaml")
         app["device"] = self.devicesName
         app["caseName"] = sys._getframe().f_code.co_name
 
-        page = LoginPage(app)
-        page.operate()
-        page.checkPoint()
-
-    def testLogout(self):
-        app = {}
-        app["logTest"] = self.logTest
-        app["driver"] = self.driver
-        app["path"] = PATH("../yaml/Login/FirstTimeLogin.yaml")
-        app["device"] = self.devicesName
-        app["caseName"] = sys._getframe().f_code.co_name
-
-        page = LoginPage(app)
+        page = Page(app)
         page.operate()
         page.checkPoint()
 

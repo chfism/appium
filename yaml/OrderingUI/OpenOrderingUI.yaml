@@ -1,0 +1,24 @@
+testinfo:
+    - id: test001
+      title: 打开我的订单
+      info: 已经登陆并停留在主页
+testcase:
+    - element_info: //android.widget.TextView[contains(@text,"我的订单")]
+      find_type: xpath
+      operate_type: click
+      info: 打开我的订单
+      is_time: 1
+    - element_info: //android.widget.Button[contains(@text,"取消")]
+      find_type: xpath
+      operate_type: click
+      info: 取消设定促销时间
+      is_time: 1
+    - element_info: //android.widget.FrameLayout[@index='3']
+      find_type: xpath
+      operate_type: click
+      info: 返回主页
+      is_time: 1
+check:
+    - element_info: //android.widget.TextView[contains(@text,"310000400400")]
+      find_type: xpath
+      info: 美容顾问姓名

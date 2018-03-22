@@ -3,23 +3,24 @@ testinfo:
       title: 美容顾问登陆
       info: 数据不清空，已登出
 testcase:
-    - element_info: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[16]/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.widget.EditText
+    - element_info: //android.widget.EditText[@index='0']
       find_type: xpath
       operate_type: set_value
       msg: "310000400400"
       info: 输入用户名
-      is_time: 5
-    - element_info: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[16]/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.EditText
+      is_time: 1
+    - element_info: //android.widget.EditText[contains(@text,"密码")]
       find_type: xpath
       operate_type: set_value
       msg: "pink2015"
       info: 输入密码
       is_time: 1
-    - element_info: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[16]/android.widget.Button
+    - element_info: //android.widget.Button[contains(@text,"登录")]
       find_type: xpath
       operate_type: click
       info: 点击登陆
       is_time: 1
 check:
-    - element_info: self.driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout")
-      info: 检查我的订单入口
+    - element_info: //android.widget.TextView[contains(@text,"310000400400")]
+      find_type: xpath
+      info: 美容顾问姓名

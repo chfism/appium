@@ -1,7 +1,7 @@
 from PageObject import Pages
 
 
-class LoginPage:
+class Page:
     """
     登陆
     """
@@ -19,8 +19,7 @@ class LoginPage:
         self.page.operate()
 
     def checkPoint(self):
-        _check = {"toast": 1}
-        self.page.checkPoint(_check)
+        self.page.checkPoint()
 
 
 if __name__ == "__main__":

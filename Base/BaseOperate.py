@@ -52,13 +52,15 @@ class OperateElement:
                     return {"result": True}
                 t = mOperate["check_time"] if mOperate.get("check_time",
                                                            "0") != "0" else be.WAIT_TIME  # 如果自定义检测时间为空，就用默认的检测等待时间
+                print("Start to Find " + mOperate["element_info"])
+                print("Driver session id is " + self.driver.session_id)
                 WebDriverWait(self.driver, t).until(lambda x: self.elements_by(mOperate))  # 操作元素是否存在
                 return {"result": True}
         except selenium.common.exceptions.TimeoutException:
-            # print("查找元素" + mOperate["element_info"] + "超时")
+            print("查找元素" + mOperate["element_info"] + "超时")
             return {"result": False}
         except selenium.common.exceptions.NoSuchElementException:
-            # print("查找元素" + mOperate["element_info"] + "不存在")
+            print("查找元素" + mOperate["element_info"] + "不存在")
             return {"result": False}
         except selenium.common.exceptions.WebDriverException:
             print("WebDriver出现问题了")

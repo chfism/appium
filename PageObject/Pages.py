@@ -29,7 +29,7 @@ class PagesObjects:
         test_msg = getYam(self.path)
         self.testInfo = test_msg["testinfo"]
         self.testCase = test_msg["testcase"]
-        self.testcheck = test_msg["check"]
+        self.testcheck = test_msg.get("check", "")
         self.device = kwargs["device"]
         self.logTest = kwargs["logTest"]
         self.caseName = kwargs["caseName"]
