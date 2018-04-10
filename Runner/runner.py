@@ -9,7 +9,6 @@ from Base.BaseAndroidPhone import *
 from Base.BaseAdb import *
 from Base.BaseRunner import ParametrizedTestCase
 from TestCase.HomeTest import HomeTest
-from TestCase.HistoryTest import HistoryTest
 from TestCase.LoginTest import LoginTest
 from TestCase.OrderingUI import OrderingUITest
 from TestCase.LogoutTest import LogoutTest
